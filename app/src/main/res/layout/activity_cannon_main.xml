@@ -1,0 +1,23 @@
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/topLevelLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="720dp"
+            android:layout_marginTop="440dp">
+
+            <cs301.cannon.Cannon
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/surfaceView"
+                android:layout_gravity="bottom"
+                android:layout_weight="0.14" />
+        </RelativeLayout>
+
+    </LinearLayout>
