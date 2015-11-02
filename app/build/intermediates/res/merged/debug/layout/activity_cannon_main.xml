@@ -4,21 +4,96 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:orientation="horizontal"
-        android:weightSum="1">
+        android:weightSum="1"
+        android:background="#ffffff">
 
-        <RelativeLayout
-            android:layout_width="300dp"
-            android:layout_height="200dp"
-            android:layout_marginLeft="720dp"
-            android:layout_marginTop="440dp">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="23.13"
+            android:id="@+id/main">
 
-            <cs301.cannon.Cannon
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/surfaceView"
+            <RelativeLayout
+                android:layout_width="300dp"
+                android:layout_height="400dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="250dp">
+
+                <cs301.cannon.Cannon
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/cannonSV"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="0.14"
+                    android:background="#ffffff" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
-                android:layout_weight="0.14" />
-        </RelativeLayout>
+                android:layout_marginLeft="20dp">
+
+                <SeekBar
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cannonSeekBar"
+                    android:max="90"
+                    android:progress="0"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FIRE"
+                    android:id="@+id/fireButton"
+                    android:textSize="30dp"
+                    android:layout_weight="1" />
+
+                <EditText
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/inGravity"
+                    android:text="9.8"
+                    android:textSize="30dp"
+                    android:layout_weight="1" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="GRAVITY"
+                    android:id="@+id/changeGravity"
+                    android:textSize="30dp"
+                    android:layout_weight="1" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="50dp">
+
+                <cs301.cannon.Target
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/ship1"
+                    android:background="#ffffff" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp" />
+
+                <cs301.cannon.Target
+                    android:layout_width="150dp"
+                    android:layout_height="100dp"
+                    android:id="@+id/ship2"
+                    android:background="#ffffff" />
+            </LinearLayout>
+        </LinearLayout>
 
     </LinearLayout>
 <!-- From: file:/Users/nathancamacho/Downloads/CS%20301/Assignment4/CannonAnimation/app/src/main/res/layout/activity_cannon_main.xml -->
